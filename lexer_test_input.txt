@@ -1,0 +1,32 @@
+--- INPUT (test_input.txt) ---
+#include<stdio.h>
+// This is a simple test
+int _var1a..
+dec _num2b..
+testFn() { }
+main() { }
+
+--- LEXICAL ANALYSIS ---
+INCLUDE              : #include<stdio.h>
+COMMENT              :  This is a simple test
+TYPE                 : int
+VAR                  : _var1a
+STMT_END             : ..
+TYPE                 : dec
+VAR                  : _num2b
+STMT_END             : ..
+FUNC_NAME            : testFn
+SYM(()
+SYM())
+SYM({)
+SYM(})
+MAIN                 : main
+SYM(()
+SYM())
+SYM({)
+SYM(})
+
+==== TOKEN STREAM ====
+INCLUDE COMMENT TYPE VAR STMT_END TYPE VAR STMT_END FUNC_NAME SYM(()
+SYM()) SYM({) SYM(}) MAIN SYM(() SYM()) SYM({) SYM(})
+==== END TOKEN STREAM ====

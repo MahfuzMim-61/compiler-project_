@@ -1,0 +1,6 @@
+#include<stdio.h>
+// This is a simple test
+int _var1a..
+dec _num2b..
+testFn() { }
+main() { }
